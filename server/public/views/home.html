@@ -1,0 +1,27 @@
+<ol class="breadcrumb">
+<li class="active">Home</li>
+</ol>
+<h1 class="homeTitle">Heroes</h1>
+<div class="container" ng-controller="HomeController">
+  <div>
+  <h1>Input a Hero.</h1>
+  <form id="heroForm">
+            <label for="alias">Alias:</label>
+            <input type="text" id="currentHeroTitle" name="alias" ng-model="currentHero.alias" />
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstName" name="firstName" ng-model="currentHero.first_name" />
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" ng-model="currentHero.last_name" />
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" ng-model="currentHero.city" />
+
+            <select class="powerSelector btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" value="power_name" name="powerSelector" ng-model="currentHero.heroPowers" ng-options="hero.label for hero in heroPowers">
+            </select>
+
+            <button ng-click="submitcurrentHero()">Submit</button>
+          </form>
+  </div>
+</div>

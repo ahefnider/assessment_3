@@ -1,0 +1,16 @@
+<ol class="breadcrumb">
+<li><a href="#home">Home</a></li>
+<li class="active">Hall of Heroes</li>
+</ol>
+<h1>Hall of Heroes</h1>
+<div class="container" ng-controller="HeroController">
+  <div class="row " ng-repeat="hero in heroes">
+    <div class="heroes col-md-6 col-md-offset-3">
+      <h2>{{hero.alias}}</h2>
+      <p>{{hero.first_name}}</p>
+      <p>{{hero.last_name}}</p>
+      <p>{{hero.city}}</p>
+      <p>{{hero.power_name[0]}}</p>
+    </div>
+  </div>
+</div>
